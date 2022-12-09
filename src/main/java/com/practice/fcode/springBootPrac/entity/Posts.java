@@ -9,12 +9,14 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Entity
+@ToString
 public class Posts {
 	
 	// Entity 클래스에는 절때 setter 를 만들지 않는다.
@@ -30,5 +32,10 @@ public class Posts {
 	private String content;
 	
 	private String author;
+	
+	public void update(String title, String content) {
+		this.title = title;
+		this.content = content;
+	}
 
 }
