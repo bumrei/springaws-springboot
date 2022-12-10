@@ -1,10 +1,14 @@
 package com.practice.fcode.springBootPrac.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import com.practice.fcode.springBootPrac.domain.BaseTimeEntity;
+
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,7 +21,7 @@ import lombok.ToString;
 @Getter
 @Entity
 @ToString
-public class Posts {
+public class Posts extends BaseTimeEntity {
 	
 	// Entity 클래스에는 절때 setter 를 만들지 않는다.
 	
